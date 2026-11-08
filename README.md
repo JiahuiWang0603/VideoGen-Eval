@@ -1,4 +1,4 @@
-# 三指标统一 Demo（当前版本）
+# 三指标测评
 
 已接入 Temporal Flickering、Subject Consistency、Motion Smoothness，分别复用现有
 RGB MAE、DINO ViT-B/16、AMT-S 模块，不更改官方公式。支持单视频或双视频同指标并排比较。
