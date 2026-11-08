@@ -10,11 +10,6 @@ cd /Users/wangjiahui/Desktop/VideoGen-Eval
 GRADIO_SERVER_PORT=7861 MPLCONFIGDIR=/tmp/videogen-eval-matplotlib .venv-subject/bin/python app.py
 ```
 
-浏览器访问 **http://127.0.0.1:7861**。7860 当前可能被旧 Demo 占用，因此推荐 7861；
-若省略 GRADIO_SERVER_PORT，则默认使用 7860。端口必须空闲。按 Ctrl+C 停止。
-沿用现有 `.venv-subject` 和 `models/dino`、`models/amt` 权重，不自动下载任何权重。
-当前完整依赖冻结在 `requirements-web.lock.txt`，旧 lock 文件保留。
-
 1. 上传视频 A；需要比较时再上传 B。两者必须为本地 MP4。
 2. 填写各自模型名称和共同 Prompt；Prompt 是用户标签，不是验证过的生成来源。
 3. 选择一个或多个指标，点击 Evaluate；A、B 顺序运行相同指标。
@@ -70,12 +65,6 @@ Temporal Flickering、双视频曲线/CSV 下载，以及单个损坏 MP4 的失
 cd /Users/wangjiahui/Desktop/VideoGen-Eval
 MPLCONFIGDIR=/tmp/videogen-eval-matplotlib .venv-subject/bin/python app.py
 ```
-
-浏览器打开 http://127.0.0.1:7860 。按 Ctrl+C 停止服务。
-上传本地 MP4，填写模型名、Prompt 和可选 video_id，选择一个或两个指标，再点击 Evaluate。
-页面显示视频预览、真实分数、逐帧曲线与运行信息，可下载得分及曲线 CSV。
-使用原始文件上传组件，评测输入不经过 Gradio 视频转码；预览兼容性不影响 OpenCV 评测。
-若浏览器无法播放某种编码，仍可查看评测结果。
 
 当前 `.venv-subject` 已安装完整依赖。新建环境可使用 Python 3.9 安装已冻结依赖：
 
