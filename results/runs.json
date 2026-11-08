@@ -1,0 +1,126 @@
+[
+  {
+    "run_id": "tf_20261108T142516814789Z",
+    "started_at_utc": "2026-11-08T14:25:16.814789+00:00",
+    "environment": {
+      "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+      "platform": "macOS-26.6-arm64-arm-64bit",
+      "machine": "arm64",
+      "opencv": "5.0.0",
+      "numpy": "2.0.2",
+      "pandas": "2.3.3",
+      "matplotlib": "3.9.4"
+    },
+    "upstream": {
+      "url": "https://raw.githubusercontent.com/Vchitect/VBench/fc4620b4d620114b77842c336f7a193c37e8e12e/vbench/temporal_flickering.py",
+      "commit": "fc4620b4d620114b77842c336f7a193c37e8e12e",
+      "sha256": "c2c892034d1652c9390f213308c18b77ae20a87bd52fc50a125294ce83af4e83"
+    },
+    "preprocessing": {
+      "decoder": "OpenCV VideoCapture",
+      "channels": "BGR color, all three channels",
+      "subtraction_dtype": "float32",
+      "resize": false,
+      "crop": false,
+      "resample_fps": false,
+      "frame_selection": "all decoded frames in order",
+      "normalization": "(255 - mean(pairwise_color_MAE)) / 255",
+      "static_filter": "manual prompt/frame review only; official automated static filter NOT run"
+    },
+    "timing_scope": "decode, metric, upstream parity check, curve CSV and PNG; excludes setup",
+    "weights": "none",
+    "artifact_directory": "results/tf_20261108T142516814789Z",
+    "implementation_sha256": "fc4f4b69b1db63222380ac40ca6038db9a782e47e952e1afb8113d871192316a",
+    "metadata_sha256": "aed72f82b37215a6b18d690a10792db2fdf8e98b6241feb92d4d7bbc72da6ca2",
+    "validation": "exact scalar and per-transition equality with AST-extracted upstream core; not full VBench pipeline"
+  },
+  {
+    "run_id": "subject_20261108T145756197210Z",
+    "device": "cpu",
+    "seed": 20261109,
+    "threads": 4,
+    "environment": {
+      "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+      "platform": "macOS-26.6-arm64-arm-64bit",
+      "torch": "2.8.0",
+      "torchvision": "0.23.0",
+      "opencv": "5.0.0",
+      "numpy": "2.0.2",
+      "pandas": "2.3.3",
+      "mps_available": false
+    },
+    "model": {
+      "dino_commit": "7c446df5b9f45747937fb0d72314eb9f7b66930a",
+      "weight_url": "https://dl.fbaipublicfiles.com/dino/dino_vitbase16_pretrain/dino_vitbase16_pretrain.pth",
+      "weight_bytes": 343242485,
+      "weight_sha256": "bf34ad0f424b9029b593e8dc3ed553bf26e88bcba0d32bf3e62a6209cb64c85e",
+      "subject_consistency.py": {
+        "url": "https://raw.githubusercontent.com/Vchitect/VBench/master/vbench/subject_consistency.py",
+        "sha256": "55f5c9a3e5be543380a709b94712903fa67a76340c3c0cb2414ac090dbd1b78d"
+      },
+      "utils.py": {
+        "url": "https://raw.githubusercontent.com/Vchitect/VBench/master/vbench/utils.py",
+        "sha256": "1bbccddfa5108bd4bf630f9b5176342c407511dea8bfe2bffa8141cb0957d064"
+      }
+    },
+    "model_load_seconds": 0.5723493750000002,
+    "identical_image_score": 1.0000001192092896,
+    "preprocessing": {
+      "decoder": "OpenCV, RGB; decord pixel parity NOT verified",
+      "all_frames": true,
+      "resize_short_edge": 224,
+      "interpolation": "bilinear tensor float32",
+      "antialias": false,
+      "crop": false,
+      "divide": 255,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "feature": "DINO ViT-B/16 CLS 768d, eval/no_grad, L2 normalized",
+    "reference": "AST extracted upstream subject_consistency using same OpenCV adapter and transform; exact scalar equality; full decord pipeline not verified",
+    "timing_scope": "decode, inference, second upstream-reference inference, curves; excludes model load",
+    "existing_artifacts_sha256": {
+      "data/sources.json": "ab2a59fedae3b148be2b407126de8b4816e620a546c7036aec4435d4d176eac4",
+      "data/download_plan.csv": "3cd50f1e79d52333129393b3c525e36562b9e249a66d46190735fcfccb0da37f",
+      "data/video_provenance.csv": "0573443c8ee841a9c5aa445ce788a9f4d477ed0e9a61b6416c9c0ea1681e26f9",
+      "data/evaluation_tasks.csv": "39adaa9217ca2be68b9cc5bbaca98fa81580f7358e098361f5ac459bd2b90717",
+      "data/metadata.csv": "aed72f82b37215a6b18d690a10792db2fdf8e98b6241feb92d4d7bbc72da6ca2",
+      "data/VBench_full_info.json": "5dd2de80ee43cda750b2b72ea7023657c0b90d3702041c7e4608c65dbe50dccd",
+      "data/prompts/temporal_flickering.txt": "9dac1e50d27f8a44f9329113183db36b61dfc41393b86fbf3ec5e07391f0cda6",
+      "data/prompts/subject_consistency.txt": "b6b72ab4799acd7fa9bee99c34b938df0c49ca303a0abf38f17ebe15c8085c49",
+      "videos/.DS_Store": "000590c8e1ca9c5a5b7ffaf42773446fb00d3135d313ffdf45138f4f096f9c55",
+      "videos/lavie/In a still frame, a stop sign-0.mp4": "dc331cb51bbcbe387ec8d0b4b20f186b2c63400f9d3d5bbf46f981646de27e9e",
+      "videos/lavie/a person swimming in ocean-0.mp4": "914854899da67a5352a85f98f157cce3916789173b9fc0f27400216adfd3eadb",
+      "videos/modelscope/In a still frame, a stop sign-0.mp4": "66a5f3ad8ecadb7b0b7714e09c7a00e3e3c7a2ea1a10e76349b9a385c1ca7d3f",
+      "videos/modelscope/a person swimming in ocean-0.mp4": "2b60f9260b6799062512c1524bcb8b5b6e04c3e97c4d5099953a48dc717ba6b3",
+      "metrics/__init__.py": "6f993f8cac34ba0f3abfbe085b9a917abb3f456944beddd9b34bd4cc4cd5a0b6",
+      "metrics/subject_consistency.py": "8270457585e7c2cfe148ea295dc96ffd6e174f787f2c06468fbb2c501ee23d9a",
+      "metrics/temporal_flickering.py": "fc4f4b69b1db63222380ac40ca6038db9a782e47e952e1afb8113d871192316a",
+      "results/data_check.csv": "123238725c81619ef0081a9fd79fc14ba2abbed3b6a1444de7a84f3fc425808b",
+      "results/prompt_coverage.csv": "65a6ce5eb7be65dba8e37258c4af13289bfff4f59d1b8290464e8ae504823d1b",
+      "results/flicker_perturbation_20261108T144110092773Z/perturbation_results.csv": "dfff9d6fac1d7dab6af1f3298ac69718b22a795c81e5d9dc6aa41c0b5e69dc72",
+      "results/flicker_perturbation_20261108T144110092773Z/frame_mae_curves.csv": "86e663b0b7a8fe350e99bead62f02a28c8c5f6e6d7c286dfbad7fcfa64029f8f",
+      "results/flicker_perturbation_20261108T144110092773Z/report.md": "fe0c51aeef94ad0a0a5296118f1e56450fba0a3473ef542f26f9043c3f0345ef",
+      "results/flicker_perturbation_20261108T144110092773Z/score_comparison.png": "bb006fa39fdcd31147b12bbdcaaf853ce959a4fceab77c9e972413ad65ad7ed6",
+      "results/flicker_perturbation_20261108T144110092773Z/manifest.json": "ed90e8d7a4bf8d08f95f7ada4d3c36e4e680d02dcacc5a2c131c6d50da7aef5a",
+      "results/flicker_perturbation_20261108T144110092773Z/frame_mae_curves.png": "3ba258249fff4712abf764227b3f0f6516bc1c4ad4bc5d1bb75284b2fdadac48",
+      "results/tf_20261108T142516814789Z/d6208521b5fca50b_curve.csv": "b178cc118d1d2b342a40b2ebdfeec64949196f10c54c40df567456d5cc018559",
+      "results/tf_20261108T142516814789Z/e35e22afaeeb4ac5_curve.png": "d8e38d6222587ab94e6ea7d95a0caca16e33e565fff06f012bba843d31c7a60c",
+      "results/tf_20261108T142516814789Z/d6208521b5fca50b_curve.png": "bf6890822386194a625be8cf21312922dcd55aef80c4243c613b16dc02c0f65e",
+      "results/tf_20261108T142516814789Z/e35e22afaeeb4ac5_curve.csv": "556c9d76b10cc09dba6fd120f4fddb039de608063e0af31a9340fa6713f1757f"
+    },
+    "code_sha256": {
+      "metrics/subject_consistency.py": "8270457585e7c2cfe148ea295dc96ffd6e174f787f2c06468fbb2c501ee23d9a",
+      "scripts/run_subject_consistency.py": "0be5ce30e58754f7315cb4130478aa07a076ee69316d047c4b945c8f188fd46c"
+    },
+    "artifact_directory": "results/subject_20261108T145756197210Z"
+  }
+]

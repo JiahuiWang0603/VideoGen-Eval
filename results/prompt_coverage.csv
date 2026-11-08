@@ -1,0 +1,4 @@
+prompt,dimension,readable_model_count,has_cross_model
+"In a still frame, a stop sign",temporal_flickering,2,True
+a person swimming in ocean,motion_smoothness,2,True
+a person swimming in ocean,subject_consistency,2,True

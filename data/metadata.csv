@@ -1,0 +1,7 @@
+video_id,model_name,prompt,dimension,video_path,source
+e35e22afaeeb4ac5,lavie,"In a still frame, a stop sign",temporal_flickering,"videos/lavie/In a still frame, a stop sign-0.mp4",https://drive.google.com/file/d/1hviZzsInIgJA96ppVj4B2DHhTZWeM4nc/view
+3554a00ce2c30ce1,lavie,a person swimming in ocean,motion_smoothness,videos/lavie/a person swimming in ocean-0.mp4,https://drive.google.com/file/d/1hviZzsInIgJA96ppVj4B2DHhTZWeM4nc/view
+3554a00ce2c30ce1,lavie,a person swimming in ocean,subject_consistency,videos/lavie/a person swimming in ocean-0.mp4,https://drive.google.com/file/d/1hviZzsInIgJA96ppVj4B2DHhTZWeM4nc/view
+d6208521b5fca50b,modelscope,"In a still frame, a stop sign",temporal_flickering,"videos/modelscope/In a still frame, a stop sign-0.mp4",https://drive.google.com/file/d/1UH2-lALFShjBywyImjDPPHTpE43eoMQE/view
+7848fe29cf7be266,modelscope,a person swimming in ocean,motion_smoothness,videos/modelscope/a person swimming in ocean-0.mp4,https://drive.google.com/file/d/1UH2-lALFShjBywyImjDPPHTpE43eoMQE/view
+7848fe29cf7be266,modelscope,a person swimming in ocean,subject_consistency,videos/modelscope/a person swimming in ocean-0.mp4,https://drive.google.com/file/d/1UH2-lALFShjBywyImjDPPHTpE43eoMQE/view

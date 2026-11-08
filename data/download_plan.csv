@@ -1,0 +1,7 @@
+model_name,prompt,dimension,expected_filename,video_path,source,status
+lavie,a person swimming in ocean,motion_smoothness,a person swimming in ocean-0.mp4,videos/lavie/a person swimming in ocean-0.mp4,https://drive.google.com/file/d/1hviZzsInIgJA96ppVj4B2DHhTZWeM4nc/view,pending_download
+lavie,a person swimming in ocean,subject_consistency,a person swimming in ocean-0.mp4,videos/lavie/a person swimming in ocean-0.mp4,https://drive.google.com/file/d/1hviZzsInIgJA96ppVj4B2DHhTZWeM4nc/view,pending_download
+modelscope,a person swimming in ocean,motion_smoothness,a person swimming in ocean-0.mp4,videos/modelscope/a person swimming in ocean-0.mp4,https://drive.google.com/file/d/1UH2-lALFShjBywyImjDPPHTpE43eoMQE/view,pending_download
+modelscope,a person swimming in ocean,subject_consistency,a person swimming in ocean-0.mp4,videos/modelscope/a person swimming in ocean-0.mp4,https://drive.google.com/file/d/1UH2-lALFShjBywyImjDPPHTpE43eoMQE/view,pending_download
+lavie,"In a still frame, a stop sign",temporal_flickering,"In a still frame, a stop sign-0.mp4","videos/lavie/In a still frame, a stop sign-0.mp4",https://drive.google.com/file/d/1hviZzsInIgJA96ppVj4B2DHhTZWeM4nc/view,pending_download
+modelscope,"In a still frame, a stop sign",temporal_flickering,"In a still frame, a stop sign-0.mp4","videos/modelscope/In a still frame, a stop sign-0.mp4",https://drive.google.com/file/d/1UH2-lALFShjBywyImjDPPHTpE43eoMQE/view,pending_download

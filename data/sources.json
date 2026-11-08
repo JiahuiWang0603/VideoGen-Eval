@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/Vchitect/VBench/master/vbench/VBench_full_info.json",
+    "path": "data/VBench_full_info.json",
+    "sha256": "5dd2de80ee43cda750b2b72ea7023657c0b90d3702041c7e4608c65dbe50dccd"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Vchitect/VBench/master/prompts/prompts_per_dimension/subject_consistency.txt",
+    "path": "data/prompts/subject_consistency.txt",
+    "sha256": "b6b72ab4799acd7fa9bee99c34b938df0c49ca303a0abf38f17ebe15c8085c49"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Vchitect/VBench/master/prompts/prompts_per_dimension/temporal_flickering.txt",
+    "path": "data/prompts/temporal_flickering.txt",
+    "sha256": "9dac1e50d27f8a44f9329113183db36b61dfc41393b86fbf3ec5e07391f0cda6"
+  }
+]

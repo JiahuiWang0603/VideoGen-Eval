@@ -1,0 +1,31 @@
+
+# Python virtual environments
+.venv/
+.venv-*/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+
+# Local videos
+videos/
+
+# Generated experiment folders
+results/*/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
