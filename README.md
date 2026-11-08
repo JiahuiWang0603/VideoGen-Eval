@@ -1,14 +1,9 @@
 # 三指标测评
 
 已接入 Temporal Flickering、Subject Consistency、Motion Smoothness，分别复用现有
-RGB MAE、DINO ViT-B/16、AMT-S 模块，不更改官方公式。支持单视频或双视频同指标并排比较。
+RGB MAE、DINO ViT-B/16、AMT-S 模块。支持单视频或双视频同指标并排比较。
 
-## 本地启动
-
-```bash
-cd /Users/wangjiahui/Desktop/VideoGen-Eval
-GRADIO_SERVER_PORT=7861 MPLCONFIGDIR=/tmp/videogen-eval-matplotlib .venv-subject/bin/python app.py
-```
+## 启动
 
 1. 上传视频 A；需要比较时再上传 B。两者必须为本地 MP4。
 2. 填写各自模型名称和共同 Prompt；Prompt 是用户标签，不是验证过的生成来源。
@@ -31,12 +26,6 @@ Motion Smoothness 衡量 AMT-S 插值重建一致性，不直接代表动作真�
 三者不合成总分；两个不同规格样本不足以判定模型总体优劣。
 
 ## 测试与真实验证
-
-```bash
-MPLCONFIGDIR=/tmp/videogen-eval-matplotlib .venv-subject/bin/python -m unittest discover -s tests -v
-# 另一个终端启动上述 Demo 后执行真实 HTTP 上传/推理/下载回归：
-DEMO_URL=http://127.0.0.1:7861 .venv-subject/bin/python scripts/verify_demo_e2e.py
-```
 
 已通过 29 项自动化测试。HTTP 回归覆盖两模型游泳视频的全部三个指标、两段停止标志的
 Temporal Flickering、双视频曲线/CSV 下载，以及单个损坏 MP4 的失败分数与清空曲线。
